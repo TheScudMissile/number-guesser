@@ -6,13 +6,10 @@ export default StyleSheet.create({
     padding: 10,
     alignItems: 'center'
   },
-  heading: {
-    fontSize: 22,
-    marginVertical: 20
-  },
   inputContainer: {
     width: 300,
     maxWidth: '80%',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 50
   }
 });

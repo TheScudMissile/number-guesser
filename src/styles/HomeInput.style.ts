@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   numberInput: {
     marginVertical: 20,
-    fontSize: 28,
+    fontSize: 18,
     width: '20%',
     height: 50,
     borderBottomWidth: 2,
