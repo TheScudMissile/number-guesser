@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import Card from './Card';
+import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import Card from '../components/Card';
 import styles from '../styles/HomeScreen.style';
-import HomeInput from './HomeInput';
+import HomeInput from '../components/HomeInput';
+import GameScreen from '../components/GameScreen';
 
 export default () => {
   const [hasConfirmed, setHasConfirmed] = useState<boolean>(false);
@@ -13,7 +14,7 @@ export default () => {
       <View style={styles.container}>
         <Card rest={styles.inputContainer}>
           {hasConfirmed ? (
-            <Text>{selectedNum}</Text>
+            <GameScreen userInput={selectedNum} />
           ) : (
             <HomeInput
               setHasConfirmed={setHasConfirmed}
