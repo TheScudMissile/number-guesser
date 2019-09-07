@@ -13,7 +13,11 @@ export default StyleSheet.create({
     elevation: 10,
     /* Android Only */
 
+    alignItems: 'center',
     backgroundColor: 'white',
-    padding: 15
+    marginTop: 100,
+    maxWidth: '80%',
+    padding: 15,
+    width: 300
   }
 });

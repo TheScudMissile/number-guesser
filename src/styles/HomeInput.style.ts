@@ -13,7 +13,7 @@ export default StyleSheet.create({
     fontSize: 18
   },
   numberInput: {
-    marginVertical: 20,
+    marginBottom: 20,
     fontSize: 18,
     width: '20%',
     height: 50,

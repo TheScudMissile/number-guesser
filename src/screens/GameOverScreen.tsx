@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import colors from '../constants/colors';
+import styles from '../styles/GameOverScreen.style';
 
 type GameOverScreenProps = {
   selectedNum: number;
@@ -8,16 +9,6 @@ type GameOverScreenProps = {
   resetGame: () => void;
 };
 
-const styles = StyleSheet.create({
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 10
-  },
-  totalRounds: {
-    marginBottom: 10
-  }
-});
 export default ({
   selectedNum,
   totalRounds,

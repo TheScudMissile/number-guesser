@@ -23,7 +23,7 @@ export default () => {
   return (
     <View style={styles.container}>
       <Header />
-      <Card rest={styles.card}>
+      <Card>
         {hasConfirmed ? (
           gameIsOver ? (
             <GameOverScreen

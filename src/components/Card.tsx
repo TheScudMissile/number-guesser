@@ -4,9 +4,8 @@ import { View } from 'react-native';
 
 type CardProps = {
   children: ReactNode;
-  rest?: object;
 };
 
-export default ({ children, rest }: CardProps) => (
-  <View style={{ ...styles.card, ...rest }}>{children}</View>
+export default ({ children }: CardProps) => (
+  <View style={styles.card}>{children}</View>
 );

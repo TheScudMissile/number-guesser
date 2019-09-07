@@ -7,6 +7,7 @@ type HomeInputProps = {
   setHasConfirmed: (hasConfirmed: boolean) => void;
   setSelectedNum: (setSelectedNum: number) => void;
 };
+
 export default ({ setHasConfirmed, setSelectedNum }: HomeInputProps) => {
   const [enteredValue, setEnteredValue] = useState<string>('');
 

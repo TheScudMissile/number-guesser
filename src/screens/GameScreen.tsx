@@ -27,6 +27,19 @@ export default ({
       { text: 'OK', style: 'default' }
     ]);
 
+  const handleGuess = (direction: string) => {
+    const lower = direction === 'lower';
+    if (lower ? guess < userInput : guess > userInput) {
+      showWarning(direction);
+    } else {
+      lower ? setMax(guess) : setMin(guess);
+      setGuess(
+        lower ? getCPUGuess(min, guess, guess) : getCPUGuess(guess, max, guess)
+      );
+      setTotalRounds(++totalRounds);
+    }
+  };
+
   const [guess, setGuess] = useState<number>(getCPUGuess(1, 99, userInput));
   const [max, setMax] = useState<number>(99);
   const [min, setMin] = useState<number>(1);
@@ -44,30 +57,14 @@ export default ({
         <View style={styles.button}>
           <Button
             title='-'
-            onPress={() => {
-              if (guess < userInput) {
-                showWarning('lower');
-              } else {
-                setMax(guess);
-                setGuess(getCPUGuess(min, guess, guess));
-                setTotalRounds(++totalRounds);
-              }
-            }}
+            onPress={() => handleGuess('lower')}
             color={colors.primary}
           />
         </View>
         <View style={styles.button}>
           <Button
             title='+'
-            onPress={() => {
-              if (guess > userInput) {
-                showWarning('higher');
-              } else {
-                setMin(guess);
-                setGuess(getCPUGuess(guess, max, guess));
-                setTotalRounds(++totalRounds);
-              }
-            }}
+            onPress={() => handleGuess('higher')}
             color={colors.primary}
           />
         </View>
