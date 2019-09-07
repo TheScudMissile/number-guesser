@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 type CardProps = {
   children: ReactNode;
-  rest: object;
+  rest?: object;
 };
 
 export default ({ children, rest }: CardProps) => (

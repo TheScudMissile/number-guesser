@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import colors from '../constants/colors';
 import styles from '../styles/GameScreen.style';
 import { Text, View, Button, Alert } from 'react-native';
 
 type GameScreenProps = {
   userInput: number;
+  totalRounds: number;
+  setTotalRounds: (totalRounds: number) => void;
+  setGameIsOver: (gameIsOver: boolean) => void;
 };
 
-export default ({ userInput }: GameScreenProps) => {
+export default ({
+  userInput,
+  totalRounds,
+  setTotalRounds,
+  setGameIsOver
+}: GameScreenProps) => {
   const getCPUGuess = (min: number, max: number, exclude: number) => {
     const guess = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -23,6 +31,12 @@ export default ({ userInput }: GameScreenProps) => {
   const [max, setMax] = useState<number>(99);
   const [min, setMin] = useState<number>(1);
 
+  useEffect(() => {
+    if (guess === userInput) {
+      setGameIsOver(true);
+    }
+  });
+
   return (
     <>
       <Text style={styles.prompt}>Computer Guess: {guess}</Text>
@@ -36,6 +50,7 @@ export default ({ userInput }: GameScreenProps) => {
               } else {
                 setMax(guess);
                 setGuess(getCPUGuess(min, guess, guess));
+                setTotalRounds(++totalRounds);
               }
             }}
             color={colors.primary}
@@ -50,6 +65,7 @@ export default ({ userInput }: GameScreenProps) => {
               } else {
                 setMin(guess);
                 setGuess(getCPUGuess(guess, max, guess));
+                setTotalRounds(++totalRounds);
               }
             }}
             color={colors.primary}

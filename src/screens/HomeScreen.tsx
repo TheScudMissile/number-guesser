@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
-import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import Card from '../components/Card';
-import styles from '../styles/HomeScreen.style';
+import React from 'react';
+import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 import HomeInput from '../components/HomeInput';
-import GameScreen from '../components/GameScreen';
 
-export default () => {
-  const [hasConfirmed, setHasConfirmed] = useState<boolean>(false);
-  const [selectedNum, setSelectedNum] = useState<number | null>(null);
-
-  return (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <View style={styles.container}>
-        <Card rest={styles.inputContainer}>
-          {hasConfirmed ? (
-            <GameScreen userInput={selectedNum} />
-          ) : (
-            <HomeInput
-              setHasConfirmed={setHasConfirmed}
-              setSelectedNum={setSelectedNum}
-            />
-          )}
-        </Card>
-      </View>
-    </TouchableWithoutFeedback>
-  );
+type HomeScreenProps = {
+  setHasConfirmed: (hasConfirmed: boolean) => void;
+  setSelectedNum: (selectedNum: number) => void;
 };
+
+export default ({ setHasConfirmed, setSelectedNum }: HomeScreenProps) => (
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+    <HomeInput
+      setHasConfirmed={setHasConfirmed}
+      setSelectedNum={setSelectedNum}
+    />
+  </TouchableWithoutFeedback>
+);
