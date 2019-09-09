@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#81d4e3",
+        "height": 120,
+        "paddingTop": 60,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 25,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Number Guesser
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "elevation": 10,
+        "marginTop": 100,
+        "maxWidth": "80%",
+        "padding": 15,
+        "shadowColor": "black",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.26,
+        "shadowRadius": 6,
+        "width": 300,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+        }
+      }
+    >
+      Enter a number 1 - 99
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCorrect={false}
+      keyboardType="number-pad"
+      maxLength={2}
+      onChangeText={[Function]}
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderBottomWidth": 2,
+          "fontSize": 18,
+          "height": 50,
+          "marginBottom": 20,
+          "textAlign": "center",
+          "width": "20%",
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityStates={Array []}
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#007AFF",
+                    "fontSize": 18,
+                    "padding": 8,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#b5b5b5",
+                  },
+                ]
+              }
+            >
+              Reset
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityStates={Array []}
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#007AFF",
+                    "fontSize": 18,
+                    "padding": 8,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#81d4e3",
+                  },
+                ]
+              }
+            >
+              Confirm
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

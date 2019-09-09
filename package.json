@@ -9,7 +9,15 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx",
+      "node"
+    ]
   },
   "dependencies": {
     "@types/react-test-renderer": "^16.8.3",
